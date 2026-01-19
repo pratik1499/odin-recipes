@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="636" height="329" viewBox="0 0 636 329">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B6EC1D;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#99ce03;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  <rect width="636" height="329" fill="url(#grad1)"/>
+  <circle cx="500" cy="200" r="80" fill="#fff" opacity="0.2"/>
+  <circle cx="150" cy="100" r="60" fill="#fff" opacity="0.15"/>
+  <circle cx="400" cy="80" r="40" fill="#fff" opacity="0.1"/>
+  <text x="318" y="170" font-family="Arial, sans-serif" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">Meal Planning</text>
+</svg>

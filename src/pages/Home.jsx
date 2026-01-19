@@ -1,5 +1,8 @@
 import React from 'react'
 
+// TODO: CRITICAL - These Figma API URLs are not stable for production use.
+// They can change, expire, or be slow to load. Download these assets and 
+// include them in the project's public/assets directory or host on a CDN.
 // Image URLs from Figma
 const imgRectangle9 = "https://www.figma.com/api/mcp/asset/71780348-c687-4ba8-8f6c-fd6597aedf34"
 const imgRectangle13 = "https://www.figma.com/api/mcp/asset/57df5478-2027-4590-a949-c9c773b109c4"
@@ -12,6 +15,9 @@ const imgFrame8 = "https://www.figma.com/api/mcp/asset/98b60029-54b4-481a-ad00-8
 const imgChart = "https://www.figma.com/api/mcp/asset/f6586b4b-5199-4f46-8906-ab53ff30c453"
 const imgBasilArrowUpOutline1 = "https://www.figma.com/api/mcp/asset/a758d0bc-c99e-4412-ac17-6ea64e42dbcd"
 
+// TODO: This component is very large (350+ lines) and uses absolute positioning extensively.
+// Consider breaking it down into smaller, reusable components (Header, Hero, NutrientCard, FeatureCard)
+// and using Flexbox/Grid with responsive variants for better maintainability and mobile support.
 function Home() {
   return (
     <div className="bg-dark-bg overflow-clip relative rounded-[16px] min-h-screen w-full">
@@ -22,28 +28,38 @@ function Home() {
       </p>
 
       {/* Navigation Menu */}
-      <div className="absolute bg-[#363636] flex gap-[16px] items-center left-1/2 p-[8px] rounded-[71px] top-[31px] translate-x-[-50%]">
-        <div className="bg-[#b6ec1d] flex items-center justify-center px-[16px] py-[10px] rounded-[33px]">
-          <p className="font-medium leading-[normal] not-italic text-[#212121] text-[18px]">
-            Home
-          </p>
-        </div>
-        <div className="flex items-center justify-center px-[16px] py-[10px] rounded-[33px]">
-          <p className="font-medium leading-[normal] not-italic text-[18px] text-white">
-            Services
-          </p>
-        </div>
-        <div className="flex items-center justify-center px-[16px] py-[10px] rounded-[33px]">
-          <p className="font-medium leading-[normal] not-italic text-[18px] text-white">
-            Contact
-          </p>
-        </div>
-        <div className="flex items-center justify-center px-[16px] py-[10px] rounded-[33px]">
-          <p className="font-medium leading-[normal] not-italic text-[18px] text-white">
-            Choose Plan
-          </p>
-        </div>
-      </div>
+      <nav className="absolute bg-[#363636] flex gap-[16px] items-center left-1/2 p-[8px] rounded-[71px] top-[31px] translate-x-[-50%]">
+        <ul className="flex gap-[16px] items-center list-none m-0 p-0">
+          <li>
+            <a href="/" className="bg-[#b6ec1d] flex items-center justify-center px-[16px] py-[10px] rounded-[33px] no-underline">
+              <span className="font-medium leading-[normal] not-italic text-[#212121] text-[18px]">
+                Home
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/services" className="flex items-center justify-center px-[16px] py-[10px] rounded-[33px] no-underline">
+              <span className="font-medium leading-[normal] not-italic text-[18px] text-white">
+                Services
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/contact" className="flex items-center justify-center px-[16px] py-[10px] rounded-[33px] no-underline">
+              <span className="font-medium leading-[normal] not-italic text-[18px] text-white">
+                Contact
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/choose-plan" className="flex items-center justify-center px-[16px] py-[10px] rounded-[33px] no-underline">
+              <span className="font-medium leading-[normal] not-italic text-[18px] text-white">
+                Choose Plan
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
       {/* Contact Us Button */}
       <div className="absolute bg-[#b6ec1d] flex items-center justify-center right-[72px] px-[24px] py-[16px] rounded-[33px] top-[33px]">
@@ -172,6 +188,10 @@ function Home() {
         </p>
       </div>
 
+      {/* TODO: The Calories, Carbohydrates, and Proteins progress bars are nearly identical.
+           Extract into a reusable NutrientProgressBar component to reduce duplication and improve maintainability. */}
+      {/* TODO: The diagonal lines implementation uses magic numbers and inline styles that are brittle.
+           Consider refactoring to use CSS pseudo-elements, SVG, or a simpler background pattern. */}
       {/* Calories Progress Bar */}
       <div className="absolute flex flex-col gap-[4px] items-start left-[1078px] top-[615px] w-[274px]">
         <div className="flex font-medium items-center justify-between leading-[normal] not-italic text-[14px] text-white w-full">

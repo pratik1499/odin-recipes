@@ -4,7 +4,7 @@ A modern, responsive recipe website built with React, Vite, and React Router. Th
 
 ## ✨ Features
 
-- **Modern React Architecture**: Built with the latest React 19 and functional components
+- **Modern React Architecture**: Built with React 18 and functional components
 - **Fast Development**: Powered by Vite for lightning-fast hot module replacement
 - **Responsive Design**: Beautiful UI that works seamlessly on desktop, tablet, and mobile devices
 - **Client-Side Routing**: Smooth navigation using React Router DOM
@@ -79,9 +79,9 @@ odin-recipes/
 
 ## 🛠️ Technologies Used
 
-- **React 19** - UI library
-- **React Router DOM 7** - Client-side routing
-- **Vite 7** - Build tool and dev server
+- **React 18** - UI library
+- **React Router DOM 6** - Client-side routing
+- **Vite 5** - Build tool and dev server
 - **CSS3** - Styling with modern features
 
 ## 📝 Available Recipes

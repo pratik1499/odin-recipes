@@ -34,7 +34,7 @@ function Recipe() {
           <h2>Ingredients</h2>
           <ul className="ingredients-list">
             {recipe.ingredients.map((ingredient, index) => (
-              <li key={index}>{ingredient}</li>
+              <li key={`${ingredient}-${index}`}>{ingredient}</li>
             ))}
           </ul>
         </section>
@@ -43,7 +43,7 @@ function Recipe() {
           <h2>Steps</h2>
           <ol className="steps-list">
             {recipe.steps.map((step, index) => (
-              <li key={index}>{step}</li>
+              <li key={`${step}-${index}`}>{step}</li>
             ))}
           </ol>
         </section>

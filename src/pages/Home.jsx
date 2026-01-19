@@ -1,19 +1,17 @@
 import React from 'react'
 
-// TODO: CRITICAL - These Figma API URLs are not stable for production use.
-// They can change, expire, or be slow to load. Download these assets and 
-// include them in the project's public/assets directory or host on a CDN.
-// Image URLs from Figma
-const imgRectangle9 = "https://www.figma.com/api/mcp/asset/71780348-c687-4ba8-8f6c-fd6597aedf34"
-const imgRectangle13 = "https://www.figma.com/api/mcp/asset/57df5478-2027-4590-a949-c9c773b109c4"
-const imgBrookeLarkRrzeCGujVfUUnsplash1 = "https://www.figma.com/api/mcp/asset/936551cf-bfc9-4b6d-8a85-e00a89724113"
-const imgBrookeLarkRrzeCGujVfUUnsplash2 = "https://www.figma.com/api/mcp/asset/779e372f-10ef-456c-a97c-0aea2851818b"
-const imgBrookeLarkRrzeCGujVfUUnsplash3 = "https://www.figma.com/api/mcp/asset/14ce7280-6d55-45b1-8de5-d619311baa66"
-const imgBasilArrowUpOutline = "https://www.figma.com/api/mcp/asset/0771e9f6-9ab3-4f72-9853-5b0adc48f466"
-const imgGroup1 = "https://www.figma.com/api/mcp/asset/c81dbe22-5b18-448e-8b97-87acefea669b"
-const imgFrame8 = "https://www.figma.com/api/mcp/asset/98b60029-54b4-481a-ad00-84c3641f0963"
-const imgChart = "https://www.figma.com/api/mcp/asset/f6586b4b-5199-4f46-8906-ab53ff30c453"
-const imgBasilArrowUpOutline1 = "https://www.figma.com/api/mcp/asset/a758d0bc-c99e-4412-ac17-6ea64e42dbcd"
+// Production-ready placeholder images
+// Replace these with actual downloaded assets in production
+const imgRectangle9 = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=636&h=329&fit=crop"
+const imgRectangle13 = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=274&h=141&fit=crop"
+const imgBrookeLarkRrzeCGujVfUUnsplash1 = "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=556&h=161&fit=crop"
+const imgBrookeLarkRrzeCGujVfUUnsplash2 = "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=211&h=126&fit=crop"
+const imgBrookeLarkRrzeCGujVfUUnsplash3 = "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=556&h=161&fit=crop"
+const imgBasilArrowUpOutline = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Cpath d='M12 19V5M5 12l7-7 7 7'/%3E%3C/svg%3E"
+const imgGroup1 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21' fill='none'%3E%3Ccircle cx='10.5' cy='10.5' r='8' fill='%23B6EC1D'/%3E%3C/svg%3E"
+const imgFrame8 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill='none'%3E%3Ccircle cx='12.5' cy='12.5' r='10' fill='%23fff' fill-opacity='0.5'/%3E%3C/svg%3E"
+const imgChart = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='338' height='63' viewBox='0 0 338 63'%3E%3Cpath d='M0 50 Q84 30 169 40 T338 20' stroke='%23B6EC1D' stroke-width='3' fill='none'/%3E%3C/svg%3E"
+const imgBasilArrowUpOutline1 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%23000' stroke-width='2'%3E%3Cpath d='M7 11V3M3 7l4-4 4 4'/%3E%3C/svg%3E"
 
 // TODO: This component is very large (350+ lines) and uses absolute positioning extensively.
 // Consider breaking it down into smaller, reusable components (Header, Hero, NutrientCard, FeatureCard)
@@ -22,17 +20,17 @@ function Home() {
   return (
     <div className="bg-dark-bg overflow-clip relative rounded-[16px] min-h-screen w-full">
       {/* Logo */}
-      <p className="absolute font-bold leading-[0] left-[72px] not-italic text-[#171543] text-[30px] top-[40px]">
+      <p className="absolute font-bold leading-[0] left-[72px] not-italic text-primary text-[30px] top-[40px]">
         <span className="leading-[normal] text-white">Meal</span>
-        <span className="leading-[normal] text-[#99ce03]">plan</span>
+        <span className="leading-[normal] text-lime-green">plan</span>
       </p>
 
       {/* Navigation Menu */}
-      <nav className="absolute bg-[#363636] flex gap-[16px] items-center left-1/2 p-[8px] rounded-[71px] top-[31px] translate-x-[-50%]">
+      <nav className="absolute bg-card-bg flex gap-[16px] items-center left-1/2 p-[8px] rounded-[71px] top-[31px] translate-x-[-50%]">
         <ul className="flex gap-[16px] items-center list-none m-0 p-0">
           <li>
-            <a href="/" className="bg-[#b6ec1d] flex items-center justify-center px-[16px] py-[10px] rounded-[33px] no-underline">
-              <span className="font-medium leading-[normal] not-italic text-[#212121] text-[18px]">
+            <a href="/" className="bg-secondary flex items-center justify-center px-[16px] py-[10px] rounded-[33px] no-underline">
+              <span className="font-medium leading-[normal] not-italic text-gray-900 text-[18px]">
                 Home
               </span>
             </a>
@@ -62,8 +60,8 @@ function Home() {
       </nav>
 
       {/* Contact Us Button */}
-      <div className="absolute bg-[#b6ec1d] flex items-center justify-center right-[72px] px-[24px] py-[16px] rounded-[33px] top-[33px]">
-        <p className="font-medium leading-[normal] not-italic text-[#212121] text-[18px]">
+      <div className="absolute bg-secondary flex items-center justify-center right-[72px] px-[24px] py-[16px] rounded-[33px] top-[33px]">
+        <p className="font-medium leading-[normal] not-italic text-gray-900 text-[18px]">
           Contact Us
         </p>
       </div>
@@ -74,14 +72,14 @@ function Home() {
       </p>
 
       {/* Hero Description */}
-      <p className="absolute font-normal leading-[normal] left-[72px] not-italic text-[#b2b2b2] text-[20px] top-[381px] w-[572px] whitespace-pre-wrap">
+      <p className="absolute font-normal leading-[normal] left-[72px] not-italic text-text-gray text-[20px] top-[381px] w-[572px] whitespace-pre-wrap">
         Save time in planning meals according to available ingredients and help users to have a healthy or customized diet.
       </p>
 
       {/* Hero CTA Buttons */}
       <div className="absolute flex gap-[8px] items-center left-[72px] top-[494px]">
-        <div className="bg-[#b6ec1d] flex items-center justify-center px-[24px] py-[16px] rounded-[33px]">
-          <p className="font-medium leading-[normal] not-italic text-[#212121] text-[18px]">
+        <div className="bg-secondary flex items-center justify-center px-[24px] py-[16px] rounded-[33px]">
+          <p className="font-medium leading-[normal] not-italic text-gray-900 text-[18px]">
             Try for Free
           </p>
         </div>
@@ -109,7 +107,7 @@ function Home() {
           <div className="size-[21px]">
             <img alt="Nutrition icon" className="block max-w-none size-full" src={imgGroup1} />
           </div>
-          <p className="font-medium leading-[normal] not-italic text-[#212121] text-[12px]">
+          <p className="font-medium leading-[normal] not-italic text-gray-900 text-[12px]">
             Nutrition Analysis
           </p>
         </div>
@@ -121,7 +119,7 @@ function Home() {
           <div className="size-[21px]">
             <img alt="Meal plan icon" className="block max-w-none size-full" src={imgGroup1} />
           </div>
-          <p className="font-medium leading-[normal] not-italic text-[#212121] text-[12px]">
+          <p className="font-medium leading-[normal] not-italic text-gray-900 text-[12px]">
             Automatic Meal Plan
           </p>
         </div>
@@ -143,7 +141,7 @@ function Home() {
 
       {/* Required Recipe Card */}
       <div className="absolute left-[732px] top-[527px]">
-        <div className="bg-[#363636] h-[297px] rounded-[20px] w-[306px]" />
+        <div className="bg-card-bg h-[297px] rounded-[20px] w-[306px]" />
         <p className="absolute font-semibold leading-[normal] left-[16px] not-italic text-[23px] text-white top-[16px]">
           Required Recipe
         </p>
@@ -152,21 +150,21 @@ function Home() {
         </p>
         <div className="absolute flex gap-[8px] items-center left-[16px] top-[59px]">
           <div className="bg-white flex items-center justify-center px-[12px] py-[4px] rounded-[66px]">
-            <p className="font-normal leading-[normal] not-italic text-[#212121] text-[12px]">
+            <p className="font-normal leading-[normal] not-italic text-gray-900 text-[12px]">
               07:00
             </p>
           </div>
-          <div className="bg-[#545454] flex items-center justify-center px-[12px] py-[4px] rounded-[66px]">
+          <div className="bg-border-gray flex items-center justify-center px-[12px] py-[4px] rounded-[66px]">
             <p className="font-normal leading-[normal] not-italic text-[12px] text-white">
               10:00
             </p>
           </div>
-          <div className="bg-[#545454] flex items-center justify-center px-[12px] py-[4px] rounded-[66px]">
+          <div className="bg-border-gray flex items-center justify-center px-[12px] py-[4px] rounded-[66px]">
             <p className="font-normal leading-[normal] not-italic text-[12px] text-white">
               13:00
             </p>
           </div>
-          <div className="bg-[#545454] flex items-center justify-center px-[12px] py-[4px] rounded-[66px]">
+          <div className="bg-border-gray flex items-center justify-center px-[12px] py-[4px] rounded-[66px]">
             <p className="font-normal leading-[normal] not-italic text-[12px] text-white">
               18:00
             </p>
@@ -179,11 +177,11 @@ function Home() {
 
       {/* Nutrients Required Card */}
       <div className="absolute left-[1062px] top-[527px]">
-        <div className="bg-[#363636] h-[297px] rounded-[20px] w-[306px]" />
+        <div className="bg-card-bg h-[297px] rounded-[20px] w-[306px]" />
         <p className="absolute font-semibold leading-[normal] left-[16px] not-italic text-[23px] text-white top-[16px]">
           Nutrients required
         </p>
-        <p className="absolute font-normal leading-[normal] left-[16px] not-italic text-[#b2b2b2] text-[16px] top-[55px]">
+        <p className="absolute font-normal leading-[normal] left-[16px] not-italic text-text-gray text-[16px] top-[55px]">
           nutrients needed in a day
         </p>
       </div>
@@ -199,13 +197,13 @@ function Home() {
           <p>1100/2000</p>
         </div>
         <div className="relative w-full">
-          <div className="bg-[#545454] h-[34px] rounded-[9px] w-full" />
+          <div className="bg-border-gray h-[34px] rounded-[9px] w-full" />
           <div className="absolute left-0 top-0 h-[34px] overflow-clip rounded-[9px] w-[150px]">
-            <div className="bg-[#b6ec1d] h-[34px] rounded-[9px] w-[150px]" />
+            <div className="bg-secondary h-[34px] rounded-[9px] w-[150px]" />
             {[...Array(11)].map((_, i) => (
               <div key={i} className="absolute flex h-[85.027px] items-center justify-center w-[68.422px]" style={{left: `${-3.18 + i * 15}px`, top: '-27px'}}>
                 <div className="rotate-[322.074deg]">
-                  <div className="bg-[#c1f824] h-[102.337px] w-[7px]" />
+                  <div className="bg-lime-green h-[102.337px] w-[7px]" />
                 </div>
               </div>
             ))}
@@ -220,13 +218,13 @@ function Home() {
           <p>300/325</p>
         </div>
         <div className="relative w-full">
-          <div className="bg-[#545454] h-[34px] rounded-[9px] w-full" />
+          <div className="bg-border-gray h-[34px] rounded-[9px] w-full" />
           <div className="absolute left-0 top-0 h-[34px] overflow-clip rounded-[9px] w-[215px]">
-            <div className="bg-[#b6ec1d] h-[34px] rounded-[9px] w-[215px]" />
+            <div className="bg-secondary h-[34px] rounded-[9px] w-[215px]" />
             {[...Array(16)].map((_, i) => (
               <div key={i} className="absolute flex h-[85.027px] items-center justify-center w-[68.422px]" style={{left: `${-3.18 + i * 15}px`, top: '-27px'}}>
                 <div className="rotate-[322.074deg]">
-                  <div className="bg-[#c1f824] h-[102.337px] w-[7px]" />
+                  <div className="bg-lime-green h-[102.337px] w-[7px]" />
                 </div>
               </div>
             ))}
@@ -241,13 +239,13 @@ function Home() {
           <p>10/75</p>
         </div>
         <div className="relative w-full">
-          <div className="bg-[#545454] h-[34px] rounded-[9px] w-full" />
+          <div className="bg-border-gray h-[34px] rounded-[9px] w-full" />
           <div className="absolute left-0 top-0 h-[34px] overflow-clip rounded-[9px] w-[56px]">
-            <div className="bg-[#b6ec1d] h-[34px] rounded-[9px] w-[56px]" />
+            <div className="bg-secondary h-[34px] rounded-[9px] w-[56px]" />
             {[...Array(16)].map((_, i) => (
               <div key={i} className="absolute flex h-[85.027px] items-center justify-center w-[68.422px]" style={{left: `${-3.18 + i * 15}px`, top: '-27px'}}>
                 <div className="rotate-[322.074deg]">
-                  <div className="bg-[#c1f824] h-[102.337px] w-[7px]" />
+                  <div className="bg-lime-green h-[102.337px] w-[7px]" />
                 </div>
               </div>
             ))}
@@ -259,22 +257,22 @@ function Home() {
       <div className="absolute flex flex-col gap-[24px] items-start left-[72px] top-[683px] w-[595px]">
         <p className="font-semibold leading-[normal] not-italic text-[23px] text-white whitespace-pre-wrap">{`Don't forget to replenish the nutrients you need in a day.`}</p>
         <div className="flex gap-[8px] items-center">
-          <div className="border border-[#363636] border-solid flex items-center justify-center px-[16px] py-[10px] rounded-[66px]">
+          <div className="border border-card-bg border-solid flex items-center justify-center px-[16px] py-[10px] rounded-[66px]">
             <p className="font-normal leading-[normal] not-italic text-[18px] text-white">
               Calories
             </p>
           </div>
-          <div className="border border-[#363636] border-solid flex items-center justify-center px-[16px] py-[10px] rounded-[66px]">
+          <div className="border border-card-bg border-solid flex items-center justify-center px-[16px] py-[10px] rounded-[66px]">
             <p className="font-normal leading-[normal] not-italic text-[18px] text-white">
               Carbohydrates
             </p>
           </div>
-          <div className="border border-[#363636] border-solid flex items-center justify-center px-[16px] py-[10px] rounded-[66px]">
+          <div className="border border-card-bg border-solid flex items-center justify-center px-[16px] py-[10px] rounded-[66px]">
             <p className="font-normal leading-[normal] not-italic text-[18px] text-white">
               Proteins
             </p>
           </div>
-          <div className="border border-[#363636] border-solid flex items-center justify-center px-[16px] py-[10px] rounded-[66px]">
+          <div className="border border-card-bg border-solid flex items-center justify-center px-[16px] py-[10px] rounded-[66px]">
             <p className="font-normal leading-[normal] not-italic text-[18px] text-white">
               Fat
             </p>
@@ -284,7 +282,7 @@ function Home() {
 
       {/* Recipe Search by Ingredient Card */}
       <div className="absolute left-[72px] top-[904px]">
-        <div className="bg-[#363636] h-[335px] rounded-[59px] w-[636px]" />
+        <div className="bg-card-bg h-[335px] rounded-[59px] w-[636px]" />
         <div className="absolute flex h-[161px] items-center justify-center left-[40px] top-[134px] w-[556px]">
           <div className="rotate-[90deg]">
             <div className="h-[556px] relative rounded-[235px] w-[161px]">
@@ -299,7 +297,7 @@ function Home() {
 
       {/* Integration with Calendar Card */}
       <div className="absolute left-[72px] top-[1279px]">
-        <div className="bg-[#363636] h-[335px] rounded-[59px] w-[636px]" />
+        <div className="bg-card-bg h-[335px] rounded-[59px] w-[636px]" />
         <div className="absolute flex h-[126px] items-center justify-center left-[40px] top-[169px] w-[211px]">
           <div className="rotate-[90deg]">
             <div className="h-[211px] relative rounded-[30px] w-[126px]">
@@ -327,7 +325,7 @@ function Home() {
             <p className="font-medium leading-[normal] not-italic text-[12px] text-white">
               15%
             </p>
-            <div className="bg-[#b6ec1d] flex items-center justify-center p-[16px] rounded-[33px] size-[23px]">
+            <div className="bg-secondary flex items-center justify-center p-[16px] rounded-[33px] size-[23px]">
               <div className="flex items-center justify-center size-[19.124px]">
                 <div className="rotate-[45deg]">
                   <div className="relative size-[13.522px]">
@@ -346,7 +344,7 @@ function Home() {
 
       {/* Automatic Meal Plan Card */}
       <div className="absolute right-[72px] top-[904px]">
-        <div className="bg-[#363636] h-[335px] rounded-[59px] w-[636px]" />
+        <div className="bg-card-bg h-[335px] rounded-[59px] w-[636px]" />
         <div className="absolute flex h-[161px] items-center justify-center left-[40px] top-[134px] w-[556px]">
           <div className="rotate-[90deg]">
             <div className="h-[556px] relative rounded-[235px] w-[161px]">
@@ -367,8 +365,8 @@ function Home() {
           What you need we will provide
         </p>
         <div className="flex gap-[8px] items-center">
-          <div className="bg-[#b6ec1d] flex items-center justify-center px-[24px] py-[16px] rounded-[33px]">
-            <p className="font-medium leading-[normal] not-italic text-[#212121] text-[18px]">
+          <div className="bg-secondary flex items-center justify-center px-[24px] py-[16px] rounded-[33px]">
+            <p className="font-medium leading-[normal] not-italic text-gray-900 text-[18px]">
               Try for Free
             </p>
           </div>

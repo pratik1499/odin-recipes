@@ -1,3 +1,4 @@
+import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { recipes } from '../data/recipes'
 import '../styles/Recipe.css'

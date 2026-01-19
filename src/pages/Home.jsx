@@ -1,3 +1,4 @@
+import React from 'react'
 import RecipeCard from '../components/RecipeCard'
 import { recipes } from '../data/recipes'
 import '../styles/Home.css'

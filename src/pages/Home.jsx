@@ -14,7 +14,7 @@ const imgBasilArrowUpOutline1 = "https://www.figma.com/api/mcp/asset/a758d0bc-c9
 
 function Home() {
   return (
-    <div className="bg-[#262626] overflow-clip relative rounded-[16px] min-h-screen w-full">
+    <div className="bg-dark-bg overflow-clip relative rounded-[16px] min-h-screen w-full">
       {/* Logo */}
       <p className="absolute font-bold leading-[0] left-[72px] not-italic text-[#171543] text-[30px] top-[40px]">
         <span className="leading-[normal] text-white">Meal</span>
@@ -223,7 +223,7 @@ function Home() {
         <div className="relative w-full">
           <div className="bg-[#545454] h-[34px] rounded-[9px] w-full" />
           <div className="absolute left-0 top-0 h-[34px] overflow-clip rounded-[9px] w-[56px]">
-            <div className="bg-[#b6ec1d] h-[34px] rounded-[9px] w-[215px]" />
+            <div className="bg-[#b6ec1d] h-[34px] rounded-[9px] w-[56px]" />
             {[...Array(16)].map((_, i) => (
               <div key={i} className="absolute flex h-[85.027px] items-center justify-center w-[68.422px]" style={{left: `${-3.18 + i * 15}px`, top: '-27px'}}>
                 <div className="rotate-[322.074deg]">

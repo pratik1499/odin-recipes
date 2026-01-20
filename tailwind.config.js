@@ -10,6 +10,7 @@ export default {
         sans: ['Poppins', 'sans-serif'],
       },
       colors: {
+        // Original colors (Mealplan app)
         primary: '#171543',
         secondary: '#B6EC1D',
         'lime-green': '#99ce03',
@@ -17,6 +18,13 @@ export default {
         'card-bg': '#363636',
         'text-gray': '#b2b2b2',
         'border-gray': '#545454',
+        // Recipedia colors
+        'recipedia-orange': '#F59E0B',
+        'recipedia-orange-hover': '#D97706',
+        'recipedia-dark': '#1F2937',
+        'recipedia-gray': '#6B7280',
+        'recipedia-light-gray': '#F9FAFB',
+        'recipedia-star': '#FBBF24',
       },
     },
   },

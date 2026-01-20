@@ -29,7 +29,7 @@ function HeroTextContent() {
         </Button>
         
         {/* Decorative Garlic Icon */}
-        <div className="hidden sm:block text-5xl animate-bounce-slow" style={{ animationDelay: '0.5s' }}>
+        <div className="hidden sm:block text-5xl animate-bounce-slow animation-delay-500">
           🧄
         </div>
       </div>

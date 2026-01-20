@@ -53,6 +53,23 @@
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
+/* Animation delay utilities */
+.animation-delay-0 {
+  animation-delay: 0s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
 /* Responsive Typography Adjustments */
 @media (max-width: 768px) {
   /* Mobile adjustments */
@@ -76,8 +93,8 @@
   }
 }
 
-/* Ensure images maintain aspect ratio */
-img {
+/* Scoped image styles for hero section */
+.hero-img {
   max-width: 100%;
   height: auto;
 }
@@ -113,11 +130,6 @@ a:focus-visible {
     flex-direction: column;
     gap: 1rem;
   }
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Grid gap adjustments for different breakpoints */

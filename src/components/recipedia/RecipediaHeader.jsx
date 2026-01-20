@@ -1,11 +1,14 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 /**
  * Recipedia Header with logo, navigation, and action icons
  */
 function RecipediaHeader() {
+  const { pathname } = useLocation()
+  
   const navLinks = [
-    { label: 'Home', href: '/', active: true },
+    { label: 'Home', href: '/' },
     { label: 'Recipe', href: '/recipe' },
     { label: 'Community', href: '/community' },
     { label: 'About Us', href: '/about' }
@@ -24,19 +27,22 @@ function RecipediaHeader() {
 
         {/* Navigation Links - Desktop */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className={`text-base font-medium transition-colors ${
-                link.active
-                  ? 'text-recipedia-dark'
-                  : 'text-recipedia-gray hover:text-recipedia-dark'
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = link.href === pathname
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                className={`text-base font-medium transition-colors ${
+                  isActive
+                    ? 'text-recipedia-dark'
+                    : 'text-recipedia-gray hover:text-recipedia-dark'
+                }`}
+              >
+                {link.label}
+              </a>
+            )
+          })}
         </nav>
 
         {/* Action Icons */}

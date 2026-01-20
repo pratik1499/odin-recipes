@@ -17,14 +17,19 @@ function DecorationIcon({
     large: 'w-20 h-20'
   }
   
+  const iconSizeClasses = {
+    small: 'text-4xl',
+    medium: 'text-5xl',
+    large: 'text-6xl'
+  }
+  
   const animationClass = animate ? 'animate-float' : ''
   
   return (
     <div 
-      className={`absolute ${position} ${sizeClasses[size]} ${animationClass} ${className}`}
-      style={{ zIndex: 1 }}
+      className={`absolute ${position} ${sizeClasses[size]} ${animationClass} ${className} z-10`}
     >
-      <div className="text-6xl">
+      <div className={iconSizeClasses[size]}>
         {icon}
       </div>
     </div>

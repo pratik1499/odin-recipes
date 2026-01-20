@@ -93,7 +93,7 @@ New Files (13):
 ├── src/pages/
 │   └── RecipediaDemo.jsx
 │
-└── Documentation/
+└── (Project Root)
     ├── RECIPEDIA_IMPLEMENTATION.md
     ├── RECIPEDIA_QUICKSTART.md
     └── RECIPEDIA_SUMMARY.md

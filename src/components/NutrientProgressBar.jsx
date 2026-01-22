@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Reusable nutrient progress bar component
@@ -7,9 +8,6 @@ import React from 'react'
 function NutrientProgressBar({ label, current, max, top }) {
   const percentage = (current / max) * 100
   const progressWidth = Math.round((percentage / 100) * 274) // 274px is the full width
-  
-  // Calculate number of pattern elements based on width
-  const patternCount = Math.ceil(progressWidth / 15)
 
   return (
     <div className={`absolute flex flex-col gap-[4px] items-start left-[1078px] w-[274px]`} style={{ top }}>
@@ -49,6 +47,13 @@ function NutrientProgressBar({ label, current, max, top }) {
       </div>
     </div>
   )
+}
+
+NutrientProgressBar.propTypes = {
+  label: PropTypes.string.isRequired,
+  current: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
+  top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
 export default NutrientProgressBar

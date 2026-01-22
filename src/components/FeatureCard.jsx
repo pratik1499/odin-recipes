@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Reusable feature card component for displaying app features
@@ -27,6 +28,13 @@ function FeatureCard({ title, image, position = 'left', top }) {
       </p>
     </div>
   )
+}
+
+FeatureCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  position: PropTypes.string,
+  top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
 export default FeatureCard

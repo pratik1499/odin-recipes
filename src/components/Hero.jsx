@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Hero section with title, description, CTA buttons, and hero image
@@ -80,6 +81,14 @@ function Hero({ heroImage, arrowIcon, nutritionIcon, mealPlanIcon, connectorIcon
       </div>
     </>
   )
+}
+
+Hero.propTypes = {
+  heroImage: PropTypes.string.isRequired,
+  arrowIcon: PropTypes.string.isRequired,
+  nutritionIcon: PropTypes.string.isRequired,
+  mealPlanIcon: PropTypes.string.isRequired,
+  connectorIcon: PropTypes.string.isRequired,
 }
 
 export default Hero
